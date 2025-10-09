@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Junior Secondary School Program</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <style>
+      @import url(programCard.css);
+      @import url(Header.css);
+      @import url(footer.css);
+      @import url(flipCard.css);
+      :root {
+        --primary-blue: #2d3192;
+        --secondary-blue: #00adf0;
+        --accent-yellow: #fff100;
+        --accent-pink: #e12f5c;
+        --text-dark: #333333;
+        --text-light: #ffffff;
+        --bg-light: #f8f9fa;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        padding-top: 90px;
+        margin: 0;
+        overflow-x: hidden;
+      }
+      .jss-section {
+        background: url(images/jss.jpeg) no-repeat center center/cover;
+        height: 80vh;
+      }
+      .jss-section-h2 {
+        font-size: 50px;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
+      .overview::after {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 2px;
+        background-color: var(--accent-yellow);
+        margin-top: 10px;
+      }
+      .overview {
+        font-size: 40px;
+        font-weight: 500;
+        text-align: justify;
+        color: var(--primary-blue);
+      }
+      .features {
+        font-size: 30px;
+        font-weight: 600;
+        color: var(--primary-blue);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="Home.html">
+            <img
+              src="images/nav-logo-no-bg.png"
+              alt="Al-Hikmah Daarul-salam Islamic School"
+              class="nav-logo"
+            />
+            <div class="brand-text">
+              <span class="school-name">Al-Hikmah Daarul-salam</span>
+              <span class="school-tagline">Islamic School</span>
+            </div>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link active" href="Home.html">HOME</a>
+              </li>
+              <li class="nav-item dropdown d-flex align-items-center">
+                <span
+                  ><a class="nav-link" href="academics.html">ACADEMICS</a></span
+                >
+                <a
+                  href="#"
+                  class="dropdown-toggle px-1 text-white dropdown-icon"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="nursery.html">NURSERY</a>
+                  </li>
+
+                  <li><a class="dropdown-item" href="#">KINDERGARTEN</a></li>
+
+                  <li>
+                    <a class="dropdown-item" href="primary.html">PRIMARY</a>
+                  </li>
+
+                  <li><a class="dropdown-item" href="jss.html">JSS1–3</a></li>
+
+                  <li><a class="dropdown-item" href="#">SS1–3</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="admission.html">ADMISSION</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">SERVICES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faqs.html">FAQ</a>
+              </li>
+              <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                <a href="admission.html" class="btn call-to-action"
+                  >Apply Now</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- section-4 story -->
+      <section id="jss">
+        <div class="jss-section d-flex align-items-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <h2 class="jss-section-h2 text-center mb-4 text-white">
+                  Junior Secondary School Program
+                </h2>
+                <p class="jss text-center text-white">
+                  Empowering Young Minds for a Brighter Future
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container my-5">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="text-left overview mb-4">
+                Junior Secondary School Overview
+              </h2>
+              <p>
+                Our Junior Secondary School (JSS) program is designed to provide
+                students with a solid foundation in both academic and personal
+                development. We focus on nurturing critical thinking, problem
+                solving, and leadership skills, preparing our students for the
+                challenges of higher education and beyond. Our curriculum is
+                comprehensive, covering core subjects such as Mathematics,
+                Science, English, and Social Studies, alongside Islamic studies
+                and moral education. We also emphasize extracurricular
+                activities, encouraging students to explore their interests and
+                talents in sports, arts, and community service. At Al-Hikmah
+                Daarul-salam Islamic School, we are committed to fostering a
+                supportive and inclusive environment where every student can
+                thrive and reach their full potential.
+              </p>
+            </div>
+          </div>
+          <div class="row py-5">
+            <div class="col-md-6 py-5">
+              <h3 class="mb-3 features">Key Features of Our JSS Program</h3>
+              <ul>
+                <li>Comprehensive Curriculum</li>
+                <li>Experienced and Dedicated Faculty</li>
+                <li>Focus on Islamic Values and Ethics</li>
+                <li>Extracurricular Activities and Clubs</li>
+                <li>State-of-the-Art Facilities</li>
+                <li>Personalized Learning Approach</li>
+                <li>Regular Assessments and Feedback</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <img
+                src="images/jss.jpeg"
+                alt="Junior Secondary School"
+                class="img-fluid rounded"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="programs-section">
+        <div class="container my-5 program-card">
+          <h2 class="text-center mb-4">
+            Meet our Scholars For 2025 BECE Examination
+          </h2>
+          <div class="row mb-4">
+            <!-- Scholar 1 -->
+            <div class="col-md-4 mb-4">
+              <div class="flip-card-wrapper scholar-1">
+                <div class="flip-card h-100">
+                  <div class="flip-card-front">
+                    <div class="card-info">
+                      <h2 class="card-title">MUYIDEEN ABDUL-GANIYY</h2>
+                      <p class="card-text">JSS 3 Student</p>
+                      <p class="card-description">
+                        "Al-Hikmah Daarul-salam has been a transformative
+                        experience for me. The blend of academic rigor and
+                        Islamic values has helped me grow both intellectually
+                        and spiritually."
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="card-content">
+                      <ul
+                        class="card-score list-unstyled border border-2 rounded-5 d-inline-block px-3 py-3 mb-3"
+                      >
+                        <li>ENGLISH : A</li>
+                        <li>MATH : A</li>
+                        <li>BST : A</li>
+                        <li>PVS : A</li>
+                        <li>IRS(Jis) : A</li>
+                        <li>ARABIC(Jis) : A</li>
+                        <li>IHS : A</li>
+                        <li>YORUBA : A</li>
+                        <li>NVE : C</li>
+                        <li>BSE : A</li>
+                      </ul>
+                      <p class="card-title text-success">Excellent</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Scholar 2 -->
+            <div class="col-md-4 mb-4">
+              <div class="flip-card-wrapper scholar-2">
+                <div class="flip-card h-100">
+                  <div class="flip-card-front">
+                    <div class="card-info">
+                      <h2 class="card-title">IBRAHIM ADIO SULTAN</h2>
+                      <p class="card-text">JSS 3 Student</p>
+                      <p class="card-description">
+                        "The supportive teachers and engaging curriculum have
+                        helped me discover my passion for science and
+                        technology. I love the balance between academics and
+                        Islamic studies."
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="card-content">
+                      <ul
+                        class="card-score list-unstyled border border-2 border-warning rounded-5 d-inline-block px-3 py-3 mb-3"
+                      >
+                        <li>ENGLISH : A</li>
+                        <li>MATH : A</li>
+                        <li>BST : A</li>
+                        <li>PVS : A</li>
+                        <li>IRS(Jis) : A</li>
+                        <li>ARABIC(Jis) : A</li>
+                        <li>IHS : A</li>
+                        <li>YORUBA : A</li>
+                        <li>NVE : A</li>
+                        <li>BSE : A</li>
+                      </ul>
+                      <p class="card-title text-success">Excellent</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Scholar 3 -->
+            <div class="col-md-4 mb-4">
+              <div class="flip-card-wrapper scholar-3">
+                <div class="flip-card h-100">
+                  <div class="flip-card-front">
+                    <div class="card-info">
+                      <h2 class="card-title">ADEDOKUN RAHMATULLAH</h2>
+                      <p class="card-text">JSS 3 Student</p>
+                      <p class="card-description">
+                        "As a new student, I was warmly welcomed by both
+                        teachers and classmates. The extracurricular activities
+                        have helped me make new friends and develop my talents."
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="card-content">
+                      <ul
+                        class="card-score list-unstyled border border-2 border-warning rounded-5 d-inline-block px-3 py-3 mb-3"
+                      >
+                        <li>ENGLISH : A</li>
+                        <li>MATH : A</li>
+                        <li>BST : A</li>
+                        <li>PVS : A</li>
+                        <li>IRS(Jis) : A</li>
+                        <li>ARABIC(Jis) : A</li>
+                        <li>IHS : A</li>
+                        <li>YORUBA : A</li>
+                        <li>NVE : A</li>
+                        <li>BSE : A</li>
+                      </ul>
+                      <p class="card-title text-success">Excellent</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- Scholar 4 -->
+            <div class="col-md-4 mb-4">
+              <div class="flip-card-wrapper scholar-4">
+                <div class="flip-card h-100">
+                  <div class="flip-card-front">
+                    <div class="card-info">
+                      <h2 class="card-title">SAIBU FATIH O.</h2>
+                      <p class="card-text">JSS 3 Student</p>
+                      <p class="card-description">
+                        "The school's focus on character building alongside
+                        academic excellence has helped me become a better Muslim
+                        and a more confident individual."
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="card-content">
+                      <ul
+                        class="card-score list-unstyled border border-2 border-warning rounded-5 d-inline-block px-3 py-3 mb-3"
+                      >
+                        <li>ENGLISH : C</li>
+                        <li>MATH : C</li>
+                        <li>BST : A</li>
+                        <li>PVS : A</li>
+                        <li>IRS(Jis) : A</li>
+                        <li>ARABIC(Jis) : C</li>
+                        <li>IHS : A</li>
+                        <li>YORUBA : A</li>
+                        <li>NVE : A</li>
+                        <li>BSE : A</li>
+                      </ul>
+                      <p class="card-title text-success">VERY GOOD</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Scholar 5 -->
+            <div class="col-md-4 mb-4">
+              <div class="flip-card-wrapper scholar-5">
+                <div class="flip-card h-100">
+                  <div class="flip-card-front">
+                    <div class="card-info">
+                      <h2 class="card-title">ABDUL-WASII ABDUL-AWWAL</h2>
+                      <p class="card-text">JSS 3 Student</p>
+                      <p class="card-description">
+                        "I particularly enjoy the sports programs and Islamic
+                        studies. The teachers are very approachable and always
+                        willing to help."
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="card-content">
+                      <ul
+                        class="card-score list-unstyled border border-2 border-warning rounded-5 d-inline-block px-3 py-3 mb-3"
+                      >
+                        <li>ENGLISH : A</li>
+                        <li>MATH : A</li>
+                        <li>BST : A</li>
+                        <li>PVS : A</li>
+                        <li>IRS(Jis) : A</li>
+                        <li>ARABIC(Jis) : A</li>
+                        <li>IHS : A</li>
+                        <li>YORUBA : A</li>
+                        <li>NVE : C</li>
+                        <li>BSE : A</li>
+                      </ul>
+                      <p class="card-title text-success">Very Good</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Scholar 6 -->
+            <div class="col-md-4 mb-4">
+              <div class="flip-card-wrapper scholar-6">
+                <div class="flip-card h-100">
+                  <div class="flip-card-front">
+                    <div class="card-info">
+                      <h2 class="card-title">ODEDIJI AISHA A.</h2>
+                      <p class="card-text">JSS 3 Student</p>
+                      <p class="card-description">
+                        "The school environment is very conducive for learning.
+                        I appreciate how the teachers make complex subjects easy
+                        to understand."
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="card-content">
+                      <ul
+                        class="card-score list-unstyled border border-2 border-warning rounded-5 d-inline-block px-3 py-3 mb-3"
+                      >
+                        <li>ENGLISH : C</li>
+                        <li>MATH : A</li>
+                        <li>BST : A</li>
+                        <li>PVS : A</li>
+                        <li>IRS(Jis) : A</li>
+                        <li>ARABIC(Jis) : A</li>
+                        <li>IHS : A</li>
+                        <li>YORUBA : A</li>
+                        <li>NVE : A</li>
+                        <li>BSE : A</li>
+                      </ul>
+                      <p class="card-title text-success">Very Good</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="programs-section">
+      <div class="container my-5 program-card">
+        <h2 class="text-center mb-4">Event & Activities</h2>
+        <div class="row mb-4">
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <a href="nursery.html">
+                <img
+                  src="images/nursery.jpeg"
+                  class="card-img-top"
+                  alt="Nursery Program"
+                />
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">AQIDA Teachings</h5>
+                <p class="card-text">
+                  Our Nursery program focuses on early childhood development,
+                  providing a safe and nurturing environment for our youngest
+                  learners.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <a href="#">
+                <img
+                  src="images/kindergarten.jpeg"
+                  class="card-img-top"
+                  alt="Kindergarten Program"
+                />
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">Class Quiz</h5>
+                <p class="card-text">
+                  Our Kindergarten program builds on the foundation laid in
+                  Nursery, introducing more structured learning while still
+                  emphasizing play and exploration.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <a href="primary.html">
+                <img
+                  src="images/primary.jpeg"
+                  class="card-img-top"
+                  alt="Primary Program"
+                />
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">Educational Teachings</h5>
+                <p class="card-text">
+                  Our Primary program offers a comprehensive curriculum that
+                  includes core subjects, Islamic studies, and extracurricular
+                  activities to foster well-rounded development.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <a href="jss.html">
+                <img
+                  src="images/jss.jpeg"
+                  class="card-img-top"
+                  alt="Junior Secondary School Program"
+                />
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">Sports</h5>
+                <p class="card-text">
+                  Our Junior Secondary School program prepares students for
+                  higher education with a focus on critical thinking, problem
+                  solving, and leadership skills.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <a href="#">
+                <img
+                  src="images/sss.jpeg"
+                  class="card-img-top"
+                  alt="Senior Secondary School Program"
+                />
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">Extracurricular Activities</h5>
+                <p class="card-text">
+                  Our Senior Secondary School program offers a rigorous
+                  curriculum designed to prepare students for university and
+                  future careers, with a strong emphasis on academic excellence
+                  and personal growth.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="custom-footer">
+      <div class="container">
+        <div class="row">
+          <!-- About Section -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="footer-section">
+              <a href="Home.html" class="footer-brand">
+                <img
+                  src="images/nav-logo-no-bg.png"
+                  alt="School Logo"
+                  class="footer-logo"
+                />
+                <div class="brand-text">
+                  <span class="school-name"> Al-Hikmah Daarul-salam </span>
+                  <span class="school-tagline">Islamic School</span>
+                </div>
+              </a>
+              <p class="mb-3">
+                Al-Hikmah Daarul-salam Islamic School is committed to providing
+                a nurturing environment that fosters academic excellence,
+                character development, and lifelong learning.
+              </p>
+              <div class="social-icons">
+                <a href="#" aria-label="Facebook"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+                <a href="#" aria-label="Twitter"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" aria-label="YouTube"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Links Section -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="footer-section">
+              <h3>Quick Links</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="Home.html">Home</a></li>
+                <li class="mb-2"><a href="#">About Us</a></li>
+                <li class="mb-2"><a href="academics.html">Academics</a></li>
+                <li class="mb-2"><a href="admission.html">Admissions</a></li>
+                <li class="mb-2"><a href="#">Student Life</a></li>
+                <li class="mb-2"><a href="#">Calendar</a></li>
+                <li class="mb-2"><a href="admission.html">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Contact Information Section -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="footer-section">
+              <h3>Contact Us</h3>
+              <div class="contact-info">
+                <p class="mb-2">
+                  <i class="fas fa-map-marker-alt"></i> 123 Akede Street,
+                  oke-baale , Osogbo, Osun State, Nigeria
+                </p>
+                <p class="mb-2"><i class="fas fa-phone"></i> (+234) 123-4567</p>
+                <p class="mb-2">
+                  <i class="fas fa-envelope"></i> info@Al-HikmahDaarulSalam.edu
+                </p>
+                <p class="mb-2">
+                  <i class="fas fa-clock"></i> Mon - Fri: 7:00 AM - 4:00 PM
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resources Section -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="footer-section">
+              <h3>Resources</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="#">Parent Portal</a></li>
+                <li class="mb-2"><a href="#">Student Portal</a></li>
+                <li class="mb-2"><a href="#">Staff Directory</a></li>
+                <li class="mb-2"><a href="#">Library</a></li>
+                <li class="mb-2"><a href="#">Cafeteria Menu</a></li>
+                <li class="mb-2"><a href="#">School Policies</a></li>
+                <li class="mb-2"><a href="#">Employment</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+          <div class="row">
+            <div class="col-md-12">
+              <p>
+                &copy; 2025 Al-Hikmah Daarul-salam Islamic School. All Rights
+                Reserved.
+              </p>
+              <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Accessibility</a>
+                <a href="#">Site Map</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

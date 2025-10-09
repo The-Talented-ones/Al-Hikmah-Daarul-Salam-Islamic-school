@@ -1,0 +1,116 @@
+:root {
+  --primary-blue: #2d3192;
+  --secondary-blue: #00adf0;
+  --accent-yellow: #fff100;
+  --accent-pink: #e12f5c;
+  --text-dark: #333333;
+  --text-light: #ffffff;
+  --bg-light: #f8f9fa;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  padding-top: 90px;
+  margin: 0;
+  overflow-x: hidden;
+}
+/* Academic Programs Section */
+.programs-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.programs-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.programs-section h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, var(--accent-yellow) 0%, var(--accent-pink) 100%);
+  border-radius: 2px;
+}
+
+.program-card .card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: white;
+  position: relative;
+}
+
+.program-card .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  z-index: 2;
+}
+
+.program-card .card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.program-card .card-img-top {
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.program-card .card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.program-card .card-body {
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.program-card .card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--primary-blue);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.program-card .card-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--accent-yellow);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.program-card .card:hover .card-title::after {
+  width: 80px;
+}
+
+.program-card .card-text {
+  color: var(--text-dark);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
