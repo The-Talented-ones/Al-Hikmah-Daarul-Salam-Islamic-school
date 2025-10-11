@@ -55,7 +55,7 @@ body {
 
 .academics {
   height: 100vh;
-  background: url(images/image2.jpeg) no-repeat center center/cover;
+  background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/image2.jpeg) center/cover no-repeat  ;
 }
 .academics h1 {
   color: white;
@@ -91,9 +91,24 @@ body {
   margin-bottom: 0.5rem;
 }
 .story-section {
-  background: url(images/story-img\ \(2\).jpeg) no-repeat center center/cover;
+  background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/story-img\ \(2\).jpeg) center/cover no-repeat  ;
   background-attachment: fixed;
   padding: 4rem 0;
+}
+.read-more{
+  background-color: var(--accent-yellow);
+  color: var(--text-dark);
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+.read-more:hover{
+  color: var(--accent-yellow);
+  background-color: transparent;
+  border: 2px solid var(--accent-yellow);
 }
 .alt-btn a {
   text-decoration: none;
