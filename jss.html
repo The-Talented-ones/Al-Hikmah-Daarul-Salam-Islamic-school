@@ -44,7 +44,7 @@
         overflow-x: hidden;
       }
       .jss-section {
-        background: url(images/jss.jpeg) no-repeat center center/cover;
+        background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/jss.jpeg) center/cover no-repeat  ;
         height: 80vh;
       }
       .jss-section-h2 {
@@ -71,10 +71,14 @@
         font-weight: 600;
         color: var(--primary-blue);
       }
+      .feature-list li{
+        font-size: 18px;
+        line-height: 38px;
+      }
     </style>
   </head>
   <body>
-    <header>
+     <header>
       <!-- Navigation -->
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
@@ -100,35 +104,32 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto align-items-lg-center">
               <li class="nav-item">
-                <a class="nav-link active" href="Home.html">HOME</a>
+                <a class="nav-link active" href="#home">HOME</a>
               </li>
-              <li class="nav-item dropdown  d-flex align-items-center">
-                <span
-                  ><a class="nav-link" href="academics.html">ACADEMICS</a></span
-                >
-                <a
-                  href="#"
-                  class="dropdown-toggle px-1 text-white dropdown-icon"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                </a>
+              <li class="nav-item dropdown mx-auto d-flex align-items-center">
+                
+                  <span  ><a class=" nav-link "href="academics.html">ACADEMICS</a></span>
+                  <a
+                    href="#"
+                    class="dropdown-toggle px-1 text-white dropdown-icon"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    
+                  </a>
+               
 
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <a class="dropdown-item" href="nursery.html">NURSERY</a>
-                  </li>
-
+                  <li><a class="dropdown-item" href="nursery.html">NURSERY</a></li>
+                 
                   <li><a class="dropdown-item" href="#">KINDERGARTEN</a></li>
-
-                  <li>
-                    <a class="dropdown-item" href="primary.html">PRIMARY</a>
-                  </li>
-
+                  
+                  <li><a class="dropdown-item" href="primary.html">PRIMARY</a></li>
+                 
                   <li><a class="dropdown-item" href="jss.html">JSS1–3</a></li>
-
+                  
                   <li><a class="dropdown-item" href="#">SS1–3</a></li>
                 </ul>
               </li>
@@ -143,9 +144,7 @@
                 <a class="nav-link" href="faqs.html">FAQ</a>
               </li>
               <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-                <a href="admission.html" class="btn call-to-action"
-                  >Apply Now</a
-                >
+                <a href="admission.html" class="btn call-to-action">Apply Now</a>
               </li>
             </ul>
           </div>
@@ -195,10 +194,10 @@
               </p>
             </div>
           </div>
-          <div class="row py-5">
-            <div class="col-md-6 py-5">
+          <div class="row py-5 d-flex align-items-center">
+            <div class="col-md-6 py-5  ">
               <h3 class="mb-3 features">Key Features of Our JSS Program</h3>
-              <ul>
+              <ul class="feature-list">
                 <li>Comprehensive Curriculum</li>
                 <li>Experienced and Dedicated Faculty</li>
                 <li>Focus on Islamic Values and Ethics</li>
@@ -679,6 +678,13 @@
         </div>
       </div>
     </footer>
+
+        <!-- Bootstrap Bundle JS (with Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="script.js"></script>
   </body>
