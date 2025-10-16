@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Primary Program</title>
+    <title>Kindergarten Program</title>
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -26,12 +26,29 @@
       @import url(programCard.css);
       @import url(Header.css);
       @import url(footer.css);
-      .primary-section {
+      @import url(flipCard.css);
+      :root {
+        --primary-blue: #2d3192;
+        --secondary-blue: #00adf0;
+        --accent-yellow: #fff100;
+        --accent-pink: #e12f5c;
+        --text-dark: #333333;
+        --text-light: #ffffff;
+        --bg-light: #f8f9fa;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        padding-top: 90px;
+        margin: 0;
+        overflow-x: hidden;
+      }
+      .kindergarten-section {
         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-          url(images/primary.jpeg) center/cover no-repeat;
+          url(images/kindergarten.jpeg) center/cover no-repeat;
         height: 80vh;
       }
-      .primary-section-h2 {
+      .kindergarten-section-h2 {
         font-size: 50px;
         font-weight: 700;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -44,13 +61,44 @@
         background-color: var(--accent-yellow);
         margin-top: 10px;
       }
-     
-      /* Primary Page Responsive Fixes */
+      .overview {
+        font-size: 40px;
+        font-weight: 500;
+        text-align: justify;
+        color: var(--primary-blue);
+      }
+      .welcome-message {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        background-color: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .arabic-text {
+        font-family: "Traditional Arabic", "Scheherazade New", serif;
+        font-size: 1.8rem;
+        color: var(--primary-green);
+        text-align: center;
+        margin: 20px 0;
+      }
+      .features {
+        font-size: 30px;
+        font-weight: 600;
+        color: var(--primary-blue);
+      }
+      .feature-list li {
+        font-size: 18px;
+        line-height: 38px;
+      }
+
+      /* Kindergarten Responsive Fixes */
       @media (max-width: 768px) {
-        .primary-section {
+        .kindergarten-section {
           height: 60vh;
         }
-        .primary-section-h2 {
+        .kindergarten-section-h2 {
           font-size: 2.5rem;
         }
         .overview {
@@ -60,25 +108,31 @@
         .overview::after {
           margin: 10px auto;
         }
+        .row.py-5.d-flex.align-items-center.mx-5 {
+          margin: 0 !important;
+        }
       }
 
       @media (max-width: 576px) {
-        .primary-section {
+        .kindergarten-section {
           height: 50vh;
         }
-        .primary-section-h2 {
+        .kindergarten-section-h2 {
           font-size: 2rem;
         }
         .overview {
           font-size: 1.6rem;
         }
+        .features {
+          font-size: 1.5rem;
+        }
       }
 
       @media (max-width: 400px) {
-        .primary-section {
+        .kindergarten-section {
           height: 45vh;
         }
-        .primary-section-h2 {
+        .kindergarten-section-h2 {
           font-size: 1.8rem;
         }
         .overview {
@@ -116,37 +170,34 @@
           width: 100%;
           padding: 10px 16px;
         }
-        .section-title {
-          font-size: 10px;
-          font-weight: 500;
-        }
       }
 
       @media (max-width: 300px) {
         body {
           padding-top: 70px;
         }
-        .primary-section {
+        .kindergarten-section {
           height: 40vh;
         }
-        .primary-section-h2 {
+        .kindergarten-section-h2 {
           font-size: 1.5rem;
         }
         .overview {
           font-size: 1.2rem;
         }
+        .welcome-message {
+          font-size: 0.8rem;
+          padding: 10px;
+        }
+        .features {
+          font-size: 1.1rem;
+        }
+        .feature-list li {
+          font-size: 0.8rem;
+        }
         .container {
           padding-left: 8px;
           padding-right: 8px;
-        }
-        .program-card .card-img-top {
-          height: 120px;
-        }
-        .program-card .card-title {
-          font-size: 1rem;
-        }
-        .program-card .card-text {
-          font-size: 0.75rem;
         }
         /* responsive header 300px below */
         .navbar-brand {
@@ -168,14 +219,17 @@
       }
 
       @media (max-width: 250px) {
-        .primary-section {
+        .kindergarten-section {
           height: 35vh;
         }
-        .primary-section-h2 {
+        .kindergarten-section-h2 {
           font-size: 1.3rem;
         }
         .overview {
           font-size: 1.1rem;
+        }
+        .welcome-message {
+          font-size: 0.75rem;
         }
       }
     </style>
@@ -286,21 +340,19 @@
         </div>
       </nav>
     </header>
-
     <main>
       <!-- section-4 story -->
-      <section id="primary">
-        <div class="primary-section d-flex align-items-center">
+      <section id="kindergarten">
+        <div class="kindergarten-section d-flex align-items-center">
           <div class="container">
             <div class="row">
               <div class="col-sm-12">
-                <h2 class="primary-section-h2 text-center mb-4 text-white">
-                  Primary School Program
+                <h2 class="kindergarten-section-h2 text-center mb-4 text-white">
+                  Kindergarten Program
                 </h2>
-                <p class="primary text-center text-white">
-                  Our Primary program offers a comprehensive curriculum that
-                  includes core subjects, Islamic studies, and extracurricular
-                  activities to foster well-rounded development.
+                <p class="kindergarten text-center text-white">
+                  Nurturing Young Hearts and Minds in a Joyful Islamic
+                  Environment.
                 </p>
               </div>
             </div>
@@ -311,33 +363,71 @@
         <div class="container my-5">
           <div class="row">
             <div class="col-md-12">
-              <h2 class="text-left overview mb-4">Primary School Overview</h2>
-              <p>
-                Our Primary School program is designed to provide a strong
-                educational foundation for children in their formative years. We
-                focus on holistic development, combining academic excellence
-                with character building and Islamic values. Our curriculum
-                includes core subjects such as Mathematics, English, Science,
-                and Social Studies, alongside Islamic studies to nurture both
-                the mind and spirit. We also offer a variety of extracurricular
-                activities, including arts, sports, and community service,
-                encouraging students to explore their interests and talents. Our
-                dedicated teachers create a supportive and engaging learning
-                environment where every child can thrive and reach their full
-                potential.
-              </p>
+              <h2 class="text-left overview mb-4">Kindergarten Overview</h2>
+              <div class="welcome-message">
+                <p class="arabic-text">
+                  بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+                </p>
+                <p>Assalamu Alaikum Warahmatullahi Wabarakatuh,</p>
+                <p>
+                  Welcome to the Kindergarten program at Al-Hikmah Daarul-Salaam
+                  Islamic School! Our kindergarten is a vibrant, nurturing, and
+                  safe haven where your child's educational journey begins with
+                  love, curiosity, and the light of Iman (faith).
+                </p>
+                <p>
+                  We believe that the early years are the most critical for
+                  shaping a child's character, intellect, and love for their
+                  Creator. Our program is carefully designed to provide a
+                  balanced foundation, seamlessly integrating a robust academic
+                  curriculum with the timeless values of Islam.
+                </p>
+                <p>
+                  Here, your child will not only learn their ABCs and 123s but
+                  also the beautiful words of Allah and the teachings of our
+                  beloved Prophet Muhammad (PBUH).
+                </p>
+              </div>
             </div>
+          </div>
+        </div>
+
+        <div class="row py-5 d-flex align-items-center mx-5">
+          <div class="col-md-6 py-5">
+            <h3 class="mb-3 features">
+              Key Features of Our Kindergarten Program
+            </h3>
+            <ul class="feature-list">
+              <li>Integrated Islamic Curriculum</li>
+              <li>Quranic Studies & Arabic Introduction</li>
+              <li>Play-Based Learning Environment</li>
+              <li>Developmentally Appropriate Activities</li>
+              <li>Focus on Islamic Values and Ethics</li>
+              <li>Small Class Sizes for Individual Attention</li>
+              <li>Safe and Nurturing Islamic Environment</li>
+            </ul>
+            <button class="main-btn btn-visit mt-4">
+              Schedule a Visit Today
+            </button>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="images/kindergarten.jpeg"
+              alt="Junior Secondary School"
+              class="img-fluid rounded"
+            />
           </div>
         </div>
       </section>
     </main>
+
     <section class="programs-section">
       <div class="container my-5 program-card">
         <h2 class="text-center mb-4">Event & Activities</h2>
         <div class="row mb-4">
           <div class="col-md-4 mb-4">
             <div class="card h-100">
-              <a href="#">
+              <a href="nursery.html">
                 <img
                   src="images/nursery.jpeg"
                   class="card-img-top"
@@ -375,7 +465,7 @@
           </div>
           <div class="col-md-4 mb-4">
             <div class="card h-100">
-              <a href="#">
+              <a href="primary.html">
                 <img
                   src="images/primary.jpeg"
                   class="card-img-top"
@@ -396,7 +486,7 @@
         <div class="row">
           <div class="col-md-4 mb-4">
             <div class="card h-100">
-              <a href="#">
+              <a href="jss.html">
                 <img
                   src="images/jss.jpeg"
                   class="card-img-top"

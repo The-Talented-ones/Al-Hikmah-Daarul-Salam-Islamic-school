@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating WhatsApp Icon Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #128C7E, #075E54);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .card h2 {
+            color: #128C7E;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .card p {
+            margin-bottom: 15px;
+        }
+        
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+        
+        /* WhatsApp Icon Styles */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .whatsapp-float:active {
+            transform: scale(0.95);
+        }
+        
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 70px;
+            bottom: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+        }
+        
+        /* Mobile responsiveness */
+        @media screen and (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 25px;
+            }
+            
+            .whatsapp-tooltip {
+                right: 60px;
+                bottom: 15px;
+                font-size: 12px;
+            }
+        }
+        
+        /* Animation for new page load */
+        @keyframes floatIn {
+            0% {
+                transform: translateY(100px) scale(0.5);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .whatsapp-float {
+            animation: floatIn 0.5s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Floating WhatsApp Icon</h1>
+            <p class="subtitle">A simple implementation for your website</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="content">
+            <div class="card">
+                <h2>Why Add a WhatsApp Icon?</h2>
+                <p>Adding a floating WhatsApp icon to your website can significantly improve customer engagement. It provides a direct communication channel that many users prefer.</p>
+                <p>Benefits include:</p>
+                <ul>
+                    <li>Increased customer engagement</li>
+                    <li>Higher conversion rates</li>
+                    <li>Improved customer satisfaction</li>
+                    <li>Mobile-friendly communication</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h2>Implementation Guide</h2>
+                <p>To add this to your website, simply copy the HTML and CSS code below and paste it into your website's code.</p>
+                <p>Make sure to:</p>
+                <ol>
+                    <li>Replace the phone number with your actual WhatsApp number</li>
+                    <li>Customize the position and styling if needed</li>
+                    <li>Test on different devices</li>
+                </ol>
+                <div class="code-block">
+                    &lt;!-- WhatsApp Floating Icon --&gt;<br>
+                    &lt;a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank"&gt;<br>
+                    &nbsp;&nbsp;&lt;i class="fab fa-whatsapp"&gt;&lt;/i&gt;<br>
+                    &nbsp;&nbsp;&lt;span class="whatsapp-tooltip"&gt;Chat with us!&lt;/span&gt;<br>
+                    &lt;/a&gt;
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Customization Options</h2>
+            <p>You can easily customize the WhatsApp icon by modifying the CSS. Here are some common customizations:</p>
+            <ul>
+                <li><strong>Position:</strong> Change bottom/right values to move the icon</li>
+                <li><strong>Size:</strong> Adjust width and height properties</li>
+                <li><strong>Color:</strong> Modify the background-color property</li>
+                <li><strong>Animation:</strong> Customize the transition and animation properties</li>
+            </ul>
+            <p>For example, to change the position to bottom-left, use:</p>
+            <div class="code-block">
+                .whatsapp-float {<br>
+                &nbsp;&nbsp;right: auto;<br>
+                &nbsp;&nbsp;left: 40px;<br>
+                }
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Floating WhatsApp Icon Implementation &copy; 2023</p>
+        </div>
+    </footer>
+    
+    <!-- WhatsApp Floating Icon -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.017 2.047c-5.502 0-9.99 4.488-9.99 9.99 0 1.76.468 3.484 1.354 4.991l-1.417 5.168 5.317-1.363c1.482.759 3.155 1.157 4.864 1.157 5.502 0 9.99-4.488 9.99-9.99s-4.488-9.99-9.99-9.99zm5.463 14.206c-.252.637-1.403 1.163-1.948 1.234-.468.059-.995.084-1.592-.361-.522-.39-1.998-1.441-3.283-2.347-2.119-1.502-3.501-3.283-3.892-3.838-.39-.555-.468-1.069-.039-1.498.234-.234.585-.468.897-.468.221 0 .468 0 .677.029.252.029.468.142.662.412.195.252.663.897.721.976.059.112.112.252.029.412-.084.142-.142.252-.252.39-.112.142-.234.252-.351.39-.112.112-.234.252-.112.468.112.234.468 1.012 1.012 1.663.702.78 1.275 1.028 1.498 1.134.252.112.397.084.546-.056.156-.142.663-.741.84-.976.195-.252.39-.209.663-.142.273.084 1.719.81 2.016.956.296.142.494.209.546.322.056.112.056.637-.195 1.274z"/>
+        </svg>
+        <span class="whatsapp-tooltip">Chat with us!</span>
+    </a>
+
+    <script>
+        // Simple script to handle WhatsApp icon interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            const whatsappIcon = document.querySelector('.whatsapp-float');
+            
+            // Add click animation
+            whatsappIcon.addEventListener('click', function() {
+                // You can add analytics tracking here
+                console.log('WhatsApp icon clicked');
+            });
+            
+            // Optional: Hide icon on scroll down, show on scroll up
+            let lastScrollTop = 0;
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > lastScrollTop && scrollTop > 200) {
+                    // Scrolling down
+                    whatsappIcon.style.transform = 'translateY(100px)';
+                } else {
+                    // Scrolling up
+                    whatsappIcon.style.transform = 'translateY(0)';
+                }
+                
+                lastScrollTop = scrollTop;
+            }, false);
+        });
+    </script>
+</body>
+</html>

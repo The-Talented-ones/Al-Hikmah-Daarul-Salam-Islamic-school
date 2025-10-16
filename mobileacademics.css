@@ -1,0 +1,408 @@
+/* Navbar Apply Button Responsive Fix */
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-item.ms-lg-2 .call-to-action {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    padding: 12px 16px;
+    font-size: 1rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+  .navbar-nav .nav-item.ms-lg-2 .call-to-action {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+}
+/* Academics Page Responsive Fixes */
+
+/* Fix top banner for mobile */
+@media (max-width: 768px) {
+  .top-banner {
+    height: 60vh;
+    margin-top: 0;
+  }
+  
+  .academics {
+    height: 60vh;
+    padding: 2rem 0 !important;
+  }
+  
+  .academics .row {
+    margin: 0;
+  }
+  
+  .academics .col-lg-7 {
+    padding: 1rem !important;
+    text-align: center;
+  }
+  
+  .academics h1 {
+    font-size: 2rem;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .academics p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 576px) {
+  .top-banner {
+    height: 50vh;
+  }
+  
+  .academics {
+    height: 50vh;
+  }
+  
+  .academics h1 {
+    font-size: 1.8rem;
+  }
+  
+  .academics p {
+    font-size: 0.9rem;
+  }
+  
+  /* Fix program cards layout */
+  .program-card .row {
+    margin: 0 -10px;
+  }
+  
+  .program-card .col-md-4 {
+    padding: 0 10px;
+  }
+  
+  .program-card .card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Fix story section for mobile */
+@media (max-width: 768px) {
+  .story-section {
+    padding: 3rem 0;
+    background-attachment: scroll; /* Remove fixed background on mobile */
+  }
+  
+  .story-section h2 {
+    font-size: 2rem;
+  }
+  
+  .story-section p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  
+  /* Stack buttons vertically on mobile */
+  .story-section .text-content .read-more,
+  .story-section .text-content .alt-btn {
+    display: block;
+    width: 200px;
+    margin: 0.5rem auto;
+  }
+}
+
+/* Fix card hover effects for touch devices */
+@media (hover: none) {
+  .program-card .card:hover {
+    transform: none;
+  }
+}
+
+/* Ensure images don't overflow */
+.program-card .card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Make cards more responsive */
+@media (max-width: 768px) {
+  .program-card .card-img-top {
+    height: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .program-card .card-img-top {
+    height: 160px;
+  }
+}
+
+/* Fix button alignment in story section */
+.story-section .text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.story-section .read-more,
+.story-section .alt-btn {
+  margin: 0.5rem;
+}
+
+/* Ensure proper spacing in programs section */
+.programs-section {
+  padding: 4rem 0;
+}
+
+.programs-section h2 {
+  color: var(--primary-blue);
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+/* Add smooth transitions for cards */
+.program-card .card {
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.program-card .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Fix main button styles */
+.main-btn {
+  background-color: var(--accent-yellow);
+  color: var(--text-dark);
+  border: none;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.main-btn:hover {
+  background-color: var(--accent-pink);
+  color: var(--text-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.alt-btn {
+  background-color: transparent;
+  color: var(--accent-yellow);
+  border: 2px solid var(--accent-yellow);
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.alt-btn:hover {
+  background-color: var(--accent-yellow);
+  color: var(--text-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+/* Extra extra small devices (below 300px) */
+@media (max-width: 300px) {
+  /* Body and general fixes */
+  body {
+    padding-top: 70px;
+    overflow-x: hidden;
+  }
+  
+  /* Navbar fixes */
+  .navbar-brand {
+    max-width: 150px;
+  }
+  
+  .nav-logo {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .brand-text {
+    margin-left: 5px;
+  }
+  
+  .school-name {
+    font-size: 0.5rem;
+  }
+  
+  .school-tagline {
+    font-size: 0.4rem;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+  
+  .navbar-nav .call-to-action {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+  }
+  
+  /* Top banner fixes */
+  .top-banner {
+    height: 40vh;
+  }
+  
+  .academics {
+    height: 40vh;
+    padding: 1rem 0 !important;
+  }
+  
+  .academics .col-lg-7 {
+    padding: 0.5rem !important;
+  }
+  
+  .academics h1 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .academics p {
+    font-size: 0.8rem;
+    line-height: 1.3;
+    margin: 10px 0;
+  }
+  
+  .main-btn {
+    padding: 6px 15px;
+    font-size: 0.8rem;
+  }
+  
+  .main-btn i {
+    font-size: 0.7rem;
+  }
+  
+  /* Programs section fixes */
+  .programs-section {
+    padding: 2rem 0;
+  }
+  
+  .programs-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .program-card .card {
+    margin-bottom: 1rem;
+  }
+  
+  .program-card .card-img-top {
+    height: 120px;
+  }
+  
+  .card-body {
+    padding: 0.8rem !important;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .card-text {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  
+  /* Story section fixes */
+  .story-section {
+    padding: 2rem 0;
+  }
+  
+  .story-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .story-section p {
+    font-size: 0.8rem;
+    line-height: 1.3;
+    padding: 0 0.5rem;
+  }
+  
+  .read-more,
+  .alt-btn {
+    padding: 6px 15px;
+    font-size: 0.8rem;
+    margin: 0.3rem;
+    width: 160px;
+  }
+  
+  /* Container padding fixes */
+  .container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  
+  /* Ensure no horizontal scrolling */
+  .row {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  
+  .col-md-4, 
+  .col-sm-12, 
+  .col-lg-7, 
+  .col-md-9 {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+/* Ultra small devices (below 250px) */
+@media (max-width: 250px) {
+  body {
+    padding-top: 60px;
+  }
+  
+  .navbar-brand {
+    max-width: 120px;
+  }
+  
+  .nav-logo {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .school-name {
+    font-size: 0.4rem;
+  }
+  
+  .school-tagline {
+    font-size: 0.35rem;
+  }
+  
+  .academics h1 {
+    font-size: 1.2rem;
+  }
+  
+  .academics p {
+    font-size: 0.7rem;
+  }
+  
+  .programs-section h2 {
+    font-size: 1.3rem;
+  }
+  
+  .story-section h2 {
+    font-size: 1.3rem;
+  }
+  
+  .read-more,
+  .alt-btn {
+    width: 140px;
+    font-size: 0.75rem;
+    padding: 5px 12px;
+  }
+}

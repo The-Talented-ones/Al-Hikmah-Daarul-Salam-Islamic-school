@@ -87,7 +87,7 @@ body {
 }
 .flip-card-front .card-info .card-text {
     font-size: 1.1rem;
-    color:var(--accent-yellow);
+    color:var(--accent-pink);
     margin-bottom: 10px;
 }
 .flip-card-front .card-info .card-description {
@@ -175,25 +175,601 @@ body {
     color: var(--primary-blue);
 }
 
-/* Responsive Adjustments */
+/* JSS Section Responsive Styles */
+.jss-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(images/jss.jpeg) center/cover no-repeat;
+  height: 80vh;
+}
+
+.jss-section-h2 {
+  font-size: 50px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.overview {
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--primary-blue);
+}
+
+.overview::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: var(--accent-yellow);
+  margin-top: 10px;
+}
+
+.features {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--primary-blue);
+}
+
+.feature-list li {
+  font-size: 18px;
+  line-height: 38px;
+}
+
+/* Flip Card Styles */
+.flip-card-wrapper {
+  perspective: 1000px;
+  height: 500px; /* Fixed height for consistency */
+  margin-bottom: 20px;
+}
+
+.flip-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Front Side Styles */
+.flip-card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.flip-card-front .card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.flip-card-front .card-info {
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--text-light);
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.flip-card-front .card-info .card-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: var(--primary-blue);
+}
+
+.flip-card-front .card-info .card-title::after {
+  display: none;
+}
+
+.flip-card-front .card-info .card-text {
+  font-size: 1.1rem;
+  color: var(--accent-pink);
+  margin-bottom: 10px;
+}
+
+.flip-card-front .card-info .card-description {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+/* Back Side Styles */
+.flip-card-back {
+  background: white;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.flip-card-back .card-content .card-title::after {
+  display: none;
+}
+
+.flip-card-back .card-content {
+  text-align: center;
+  width: 100%;
+}
+
+.card-score {
+  background: rgba(255, 215, 0, 0.1);
+  border: 2px solid #ffd700 !important;
+  border-radius: 15px !important;
+  padding: 15px 20px;
+  margin: 15px 0;
+}
+
+.card-score li {
+  padding: 5px 0;
+  font-weight: 500;
+}
+
+/* Specific background images for each scholar */
+.scholar-1 .flip-card-front {
+  background: url('images/scholar1.jpeg') no-repeat center center/cover;
+}
+
+.scholar-2 .flip-card-front {
+  background: url('images/scholar2.jpeg') no-repeat center center/cover;
+}
+
+.scholar-3 .flip-card-front {
+  background: url('images/scholar3.jpeg') no-repeat center center/cover;
+}
+
+.scholar-4 .flip-card-front {
+  background: url('images/scholar4.jpeg') no-repeat center center/cover;
+}
+
+.scholar-5 .flip-card-front {
+  background: url('images/scholar5.jpeg') no-repeat center center/cover;
+}
+
+.scholar-6 .flip-card-front {
+  background: url('images/scholar2.jpeg') no-repeat center center/cover;
+}
+
+/* Different names and details for each scholar */
+.scholar-2 .card-info .card-title,
+.scholar-2 .card-content .card-title {
+  content: "Aisha Abdullahi";
+  color: var(--primary-blue);
+}
+
+.scholar-3 .card-info .card-title,
+.scholar-3 .card-content .card-title {
+  content: "Mohammed Ibrahim";
+  color: var(--primary-blue);
+}
+
+.scholar-4 .card-info .card-title,
+.scholar-4 .card-content .card-title {
+  content: "Fatima Yusuf";
+  color: var(--primary-blue);
+}
+
+.scholar-5 .card-info .card-title,
+.scholar-5 .card-content .card-title {
+  content: "Hassan Bello";
+  color: var(--primary-blue);
+}
+
+.scholar-6 .card-info .card-title,
+.scholar-6 .card-content .card-title {
+  content: "Zainab Ahmed";
+  color: var(--primary-blue);
+}
+
+/* Responsive Design for JSS Section and Flip Cards */
+
+/* Medium devices (tablets, 768px and below) */
 @media (max-width: 768px) {
-    .flip-card-wrapper {
-        height: 350px;
-    }
-    
-    .card-content {
-        padding: 15px;
-    }
-    
-    .card-title {
-        font-size: 1.3rem;
-    }
-    
-    .card-description {
-        font-size: 0.9rem;
-    }
-    
-    .flip-card-front .card-info {
-        padding: 15px;
-    }
+  .jss-section {
+    height: 60vh;
+  }
+  
+  .jss-section-h2 {
+    font-size: 2.5rem;
+  }
+  
+  .jss {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+  
+  .overview {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .overview::after {
+    margin: 10px auto;
+  }
+  
+  .features {
+    font-size: 1.8rem;
+  }
+  
+  .feature-list li {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Flip cards responsive */
+  .flip-card-wrapper {
+    height: 350px;
+  }
+  
+  .flip-card-front .card-info {
+    padding: 15px;
+  }
+  
+  .flip-card-front .card-info .card-title {
+    font-size: 1.3rem;
+  }
+  
+  .flip-card-front .card-info .card-text {
+    font-size: 1rem;
+  }
+  
+  .flip-card-front .card-info .card-description {
+    font-size: 0.85rem;
+  }
+  
+  .flip-card-back {
+    padding: 20px;
+  }
+  
+  .card-score {
+    padding: 12px 15px;
+    margin: 10px 0;
+  }
+  
+  .card-score li {
+    font-size: 0.9rem;
+    padding: 3px 0;
+  }
+}
+
+/* Small devices (landscape phones, 576px and below) */
+@media (max-width: 576px) {
+  .jss-section {
+    height: 50vh;
+  }
+  
+  .jss-section-h2 {
+    font-size: 2rem;
+  }
+  
+  .jss {
+    font-size: 1rem;
+  }
+  
+  .overview {
+    font-size: 1.6rem;
+  }
+  
+  .features {
+    font-size: 1.5rem;
+  }
+  
+  .feature-list li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  /* Flip cards responsive */
+  .flip-card-wrapper {
+    height: 300px;
+  }
+  
+  .flip-card-front .card-info {
+    padding: 12px;
+  }
+  
+  .flip-card-front .card-info .card-title {
+    font-size: 1.2rem;
+  }
+  
+  .flip-card-front .card-info .card-text {
+    font-size: 0.9rem;
+  }
+  
+  .flip-card-front .card-info .card-description {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+  
+  .flip-card-back {
+    padding: 15px;
+  }
+  
+  .card-score {
+    padding: 10px 12px;
+    margin: 8px 0;
+  }
+  
+  .card-score li {
+    font-size: 0.85rem;
+    padding: 2px 0;
+  }
+}
+
+/* Extra small devices (phones, 400px and below) */
+@media (max-width: 400px) {
+  .jss-section {
+    height: 45vh;
+  }
+  
+  .jss-section-h2 {
+    font-size: 1.8rem;
+  }
+  
+  .jss {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+  
+  .overview {
+    font-size: 1.4rem;
+  }
+  
+  .features {
+    font-size: 1.3rem;
+  }
+  
+  .feature-list li {
+    font-size: 0.85rem;
+  }
+  
+  /* Flip cards responsive */
+  .flip-card-wrapper {
+    height: 280px;
+  }
+  
+  .flip-card-front .card-info {
+    padding: 10px;
+  }
+  
+  .flip-card-front .card-info .card-title {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  
+  .flip-card-front .card-info .card-text {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+  }
+  
+  .flip-card-front .card-info .card-description {
+    font-size: 0.75rem;
+    line-height: 1.2;
+    margin-top: 8px;
+  }
+  
+  .flip-card-back {
+    padding: 12px;
+  }
+  
+  .card-score {
+    padding: 8px 10px;
+    margin: 6px 0;
+  }
+  
+  .card-score li {
+    font-size: 0.8rem;
+    padding: 1px 0;
+  }
+}
+
+/* Extra extra small devices (below 300px) */
+@media (max-width: 300px) {
+  .jss-section {
+    height: 40vh;
+    padding: 1rem 0;
+  }
+  
+  .jss-section-h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem !important;
+  }
+  
+  .jss {
+    font-size: 0.8rem;
+    padding: 0 0.5rem;
+  }
+  
+  .overview {
+    font-size: 1.2rem;
+  }
+  
+  .overview::after {
+    width: 60px;
+    height: 2px;
+  }
+  
+  .features {
+    font-size: 1.1rem;
+    margin-bottom: 1rem !important;
+  }
+  
+  .feature-list {
+    padding-left: 1rem;
+  }
+  
+  .feature-list li {
+    font-size: 0.8rem;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Flip cards responsive */
+  .flip-card-wrapper {
+    height: 250px;
+    margin-bottom: 15px;
+  }
+  
+  .flip-card-front .card-info {
+    padding: 8px;
+  }
+  
+  .flip-card-front .card-info .card-title {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+  
+  .flip-card-front .card-info .card-text {
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+  }
+  
+  .flip-card-front .card-info .card-description {
+    font-size: 0.7rem;
+    line-height: 1.1;
+    margin-top: 6px;
+  }
+  
+  .flip-card-back {
+    padding: 10px;
+  }
+  
+  .card-score {
+    padding: 6px 8px;
+    margin: 5px 0;
+  }
+  
+  .card-score li {
+    font-size: 0.75rem;
+    padding: 1px 0;
+  }
+  
+  .flip-card-back .card-content .card-title {
+    font-size: 0.9rem;
+  }
+}
+
+/* Ultra small devices (below 250px) */
+@media (max-width: 250px) {
+  .jss-section {
+    height: 35vh;
+  }
+  
+  .jss-section-h2 {
+    font-size: 1.3rem;
+  }
+  
+  .jss {
+    font-size: 0.75rem;
+  }
+  
+  .overview {
+    font-size: 1.1rem;
+  }
+  
+  .features {
+    font-size: 1rem;
+  }
+  
+  .feature-list li {
+    font-size: 0.75rem;
+  }
+  
+  /* Flip cards responsive */
+  .flip-card-wrapper {
+    height: 220px;
+  }
+  
+  .flip-card-front .card-info {
+    padding: 6px;
+  }
+  
+  .flip-card-front .card-info .card-title {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+  }
+  
+  .flip-card-front .card-info .card-text {
+    font-size: 0.75rem;
+    margin-bottom: 4px;
+  }
+  
+  .flip-card-front .card-info .card-description {
+    font-size: 0.65rem;
+    line-height: 1.1;
+    margin-top: 4px;
+  }
+  
+  .flip-card-back {
+    padding: 8px;
+  }
+  
+  .card-score {
+    padding: 5px 6px;
+    margin: 4px 0;
+  }
+  
+  .card-score li {
+    font-size: 0.7rem;
+  }
+  
+  .flip-card-back .card-content .card-title {
+    font-size: 0.8rem;
+  }
+}
+
+/* Fix specific layout issues */
+@media (max-width: 768px) {
+  /* Center align content on mobile */
+  .text-left.overview {
+    text-align: center !important;
+  }
+  
+  /* Stack image below features on mobile */
+  .row.py-5.d-flex.align-items-center .col-md-6:last-child {
+    margin-top: 2rem;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+  .flip-card {
+    cursor: default;
+  }
+  
+  /* Alternative flip mechanism for touch devices */
+  .flip-card.flipped {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Ensure images are responsive */
+.img-fluid.rounded {
+  max-width: 100%;
+  height: auto;
 }

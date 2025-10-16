@@ -27,7 +27,8 @@
       @import url(footer.css);
       @import url(programCard.css);
       .nursery-section {
-        background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/nursery.jpeg) center/cover no-repeat  ;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url(images/nursery.jpeg) center/cover no-repeat;
         height: 80vh;
       }
       .nursery-section-h2 {
@@ -35,14 +36,71 @@
         font-weight: 700;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
       }
+      @media (max-width: 400px) {
+        /* rresponsive header 400px below */
+        .navbar-brand {
+          flex-direction: row;
+          align-items: center;
+        }
+
+        .brand-text {
+          display: block !important;
+          margin-left: 8px;
+        }
+
+        .school-name {
+          font-size: 0.7rem;
+          line-height: 1;
+        }
+
+        .school-tagline {
+          font-size: 0.6rem;
+          line-height: 1;
+        }
+
+        .nav-logo {
+          width: 35px;
+          height: 35px;
+        }
+        .navbar-nav .call-to-action {
+          margin-top: 10px;
+          display: block;
+          text-align: center;
+          width: 100%;
+          padding: 10px 16px;
+        }
+        .section-title{
+          font-size: 10px;
+          font-weight: 500;
+        }
+      }
+      @media (max-width: 300px) {
+        /* responsive header 300px below */
+        .navbar-brand {
+          max-width: 180px;
+        }
+
+        .school-name {
+          font-size: 0.6rem;
+        }
+
+        .school-tagline {
+          font-size: 0.5rem;
+        }
+
+        .nav-logo {
+          width: 30px;
+          height: 30px;
+        }
+      }
     </style>
   </head>
   <body>
- <header>
+    <header>
       <!-- Navigation -->
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-          <a class="navbar-brand" href="Home.html">
+          <a class="navbar-brand" href="index.html">
             <img
               src="images/nav-logo-no-bg.png"
               alt="Al-Hikmah Daarul-salam Islamic School"
@@ -64,47 +122,79 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto align-items-lg-center">
               <li class="nav-item">
-                <a class="nav-link active" href="#home">HOME</a>
+                <a class="nav-link active" href="index.html" data-page="home"
+                  >HOME</a
+                >
               </li>
               <li class="nav-item dropdown mx-auto d-flex align-items-center">
-                
-                  <span  ><a class=" nav-link "href="academics.html">ACADEMICS</a></span>
-                  <a
-                    href="#"
-                    class="dropdown-toggle px-1 text-white dropdown-icon"
-                    id="navbarDropdown"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    
-                  </a>
-               
+                <span
+                  ><a
+                    class="nav-link"
+                    href="academics.html"
+                    data-page="academics"
+                    >ACADEMICS</a
+                  ></span
+                >
+                <a
+                  href="#"
+                  class="dropdown-toggle px-1 text-white dropdown-icon"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                ></a>
 
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="nursery.html">NURSERY</a></li>
-                 
-                  <li><a class="dropdown-item" href="#">KINDERGARTEN</a></li>
-                  
-                  <li><a class="dropdown-item" href="primary.html">PRIMARY</a></li>
-                 
-                  <li><a class="dropdown-item" href="jss.html">JSS1–3</a></li>
-                  
-                  <li><a class="dropdown-item" href="#">SS1–3</a></li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="nursery.html"
+                      data-page="nursery"
+                      >NURSERY</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="kindergarten.html" data-page="kindergarten"
+                      >KINDERGARTEN</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="primary.html"
+                      data-page="primary"
+                      >PRIMARY</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="jss.html" data-page="jss"
+                      >JSS1–3</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="sss.html" data-page="ss">SS1–3</a>
+                  </li>
                 </ul>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="admission.html">ADMISSION</a>
+                <a class="nav-link" href="admission.html" data-page="admission"
+                  >ADMISSION</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#services">SERVICES</a>
+                <a class="nav-link" href="#" data-page="services">SERVICES</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="faqs.html">FAQ</a>
+                <a class="nav-link" href="faqs.html" data-page="faq">FAQ</a>
               </li>
               <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-                <a href="admission.html" class="btn call-to-action">Apply Now</a>
+                <a
+                  href="admission.html"
+                  class="btn call-to-action "
+                  data-page="apply"
+                  >Apply Now</a
+                >
               </li>
             </ul>
           </div>
@@ -244,118 +334,7 @@
       </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer class="custom-footer">
-      <div class="container">
-        <div class="row">
-          <!-- About Section -->
-          <div class="col-lg-3 col-md-6 mb-4">
-            <div class="footer-section">
-              <a href="Home.html" class="footer-brand">
-                <img
-                  src="images/nav-logo-no-bg.png"
-                  alt="School Logo"
-                  class="footer-logo"
-                />
-                <div class="brand-text">
-                  <span class="school-name"> Al-Hikmah Daarul-salam </span>
-                  <span class="school-tagline">Islamic School</span>
-                </div>
-              </a>
-              <p class="mb-3">
-                Al-Hikmah Daarul-salam Islamic School is committed to providing
-                a nurturing environment that fosters academic excellence,
-                character development, and lifelong learning.
-              </p>
-              <div class="social-icons">
-                <a href="#" aria-label="Facebook"
-                  ><i class="fab fa-facebook"></i
-                ></a>
-                <a href="#" aria-label="Twitter"
-                  ><i class="fab fa-twitter"></i
-                ></a>
-                <a href="#" aria-label="Instagram"
-                  ><i class="fab fa-instagram"></i
-                ></a>
-                <a href="#" aria-label="YouTube"
-                  ><i class="fab fa-youtube"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Quick Links Section -->
-          <div class="col-lg-3 col-md-6 mb-4">
-            <div class="footer-section">
-              <h3>Quick Links</h3>
-              <ul class="list-unstyled">
-                <li class="mb-2"><a href="Home.html">Home</a></li>
-                <li class="mb-2"><a href="#">About Us</a></li>
-                <li class="mb-2"><a href="academics.html">Academics</a></li>
-                <li class="mb-2"><a href="admission.html">Admissions</a></li>
-                <li class="mb-2"><a href="#">Student Life</a></li>
-                <li class="mb-2"><a href="#">Calendar</a></li>
-                <li class="mb-2"><a href="admission.html">Contact Us</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Contact Information Section -->
-          <div class="col-lg-3 col-md-6 mb-4">
-            <div class="footer-section">
-              <h3>Contact Us</h3>
-              <div class="contact-info">
-                <p class="mb-2">
-                  <i class="fas fa-map-marker-alt"></i>Akede Street,
-                 oke-baale, Osogbo, Osun State, Nigeria
-                </p>
-                <p class="mb-2"><i class="fas fa-phone"></i> (+234) 123-4567</p>
-                <p class="mb-2">
-                  <i class="fas fa-envelope"></i> info@Al-HikmahDaaruSalaam.edu
-                </p>
-                <p class="mb-2">
-                  <i class="fas fa-clock"></i> Mon - Fri: 7:00 AM - 4:00 PM
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Resources Section -->
-          <div class="col-lg-3 col-md-6 mb-4">
-            <div class="footer-section">
-              <h3>Resources</h3>
-              <ul class="list-unstyled">
-                <li class="mb-2"><a href="#">Parent Portal</a></li>
-                <li class="mb-2"><a href="#">Student Portal</a></li>
-                <li class="mb-2"><a href="#">Staff Directory</a></li>
-                <li class="mb-2"><a href="#">Library</a></li>
-                <li class="mb-2"><a href="#">Cafeteria Menu</a></li>
-                <li class="mb-2"><a href="#">School Policies</a></li>
-                <li class="mb-2"><a href="#">Employment</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Footer Bottom Section -->
-        <div class="footer-bottom">
-          <div class="row">
-            <div class="col-md-12">
-              <p>
-                &copy; 2025 Al-Hikmah Daarul-salam Islamic School. All Rights
-                Reserved.
-              </p>
-              <div class="footer-bottom-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Accessibility</a>
-                <a href="#">Site Map</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <div id="footer-placeholder"></div>
 
     <!-- Bootstrap Bundle JS (with Popper) -->
     <script
