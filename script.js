@@ -1,9 +1,15 @@
 // // Load header
 // fetch("header.html")
-//   .then((response) => response.text())
-//   .then((data) => {
-//     document.getElementById("header-placeholder").innerHTML = data;
-//   });
+//       .then(res => res.text())
+//       .then(data => {
+//         document.getElementById("header-placeholder").innerHTML = data;
+//         // Make the page visible once header is ready
+//         document.body.style.visibility = "visible";
+//       })
+//       .catch(err => {
+//         console.error("Error loading header:", err);
+//         document.body.style.visibility = "visible";
+//       });
 
 // Load footer
 fetch("footer.html")
