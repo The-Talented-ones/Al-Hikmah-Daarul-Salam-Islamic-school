@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nursery Program</title>
+    <title>FAQS</title>
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -22,77 +22,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <!-- Custom CSS -->
+    <link rel="stylesheet" href="service.css" />
     <style>
-      @import url(Header.css);
+      @import url(academics.css);
       @import url(footer.css);
-      @import url(programCard.css);
-      .nursery-section {
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-          url(images/nursery.jpeg) center/cover no-repeat;
-        height: 80vh;
-      }
-      .nursery-section-h2 {
-        font-size: 50px;
-        font-weight: 700;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-      }
-      @media (max-width: 400px) {
-        /* rresponsive header 400px below */
-        .navbar-brand {
-          flex-direction: row;
-          align-items: center;
-        }
-
-        .brand-text {
-          display: block !important;
-          margin-left: 8px;
-        }
-
-        .school-name {
-          font-size: 0.7rem;
-          line-height: 1;
-        }
-
-        .school-tagline {
-          font-size: 0.6rem;
-          line-height: 1;
-        }
-
-        .nav-logo {
-          width: 35px;
-          height: 35px;
-        }
-        .navbar-nav .call-to-action {
-          margin-top: 10px;
-          display: block;
-          text-align: center;
-          width: 100%;
-          padding: 10px 16px;
-        }
-        .section-title {
-          font-size: 10px;
-          font-weight: 500;
-        }
-      }
-      @media (max-width: 300px) {
-        /* responsive header 300px below */
-        .navbar-brand {
-          max-width: 180px;
-        }
-
-        .school-name {
-          font-size: 0.6rem;
-        }
-
-        .school-tagline {
-          font-size: 0.5rem;
-        }
-
-        .nav-logo {
-          width: 30px;
-          height: 30px;
-        }
-      }
       :root {
         --primary-blue: #2d3192;
         --secondary-blue: #00adf0;
@@ -344,7 +277,7 @@
           <a class="navbar-brand" href="index.html">
             <img
               src="images/nav-logo-no-bg.png"
-              alt="Al-Hikmah Daarus-salaam Islamic School"
+              alt="Al-Hikmah Daarul-salam Islamic School"
               class="nav-logo"
             />
             <div class="brand-text">
@@ -447,150 +380,305 @@
         </div>
       </nav>
     </header>
-
     <main>
-      <!-- section-4 story -->
-      <section id="nursery">
-        <div class="nursery-section d-flex align-items-center">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12">
-                <h2 class="nursery-section-h2 text-center mb-4 text-white">
-                  Nursery
-                </h2>
-                <p class="nursery-section-text text-center text-white">
-                  Our Nursery program is designed to provide a safe, nurturing,
-                  and stimulating environment for our youngest learners. We
-                  focus on early childhood development, fostering social,
-                  emotional, cognitive, and physical growth through play-based
-                  learning and age-appropriate activities. Our experienced and
-                  caring staff create a warm atmosphere where children can
-                  explore, discover, and develop foundational skills that will
-                  prepare them for future academic success.
+      <section id="service">
+        <div class="px-0 service-banner text-center">
+          <div class="service d-flex align-items-center justify-center">
+            <div class="row px-5">
+              <div class="col-lg-10 col-md-9 p-5 mx-auto">
+                <h1 class="">Comprehensive Educational Excellence</h1>
+                <p>
+                  At Al-Hikmah Daarus-salaam Islamic School, we are dedicated to
+                  nurturing young minds and fostering a love for learning in a
+                  supportive and inclusive environment.
                 </p>
+                <div class="mt-4">
+                  <button class="main-btn">
+                    Explore Our Services <i class="fas fa-angle-right ps-3"></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <section class="programs-section">
-      <div class="container my-5 program-card">
-        <h2 class="text-center mb-4">Event & Activities</h2>
+    <!-- offers -->
+    <section id="offers">
+      <div class="explore-offers wrapper">
+        <div class="container mt-5">
+          <div class="row pt-5">
+            <div class="col-sm-12 mb-4">
+              <div class="text-content text-center">
+                <h1>What we offer</h1>
+                <p style="text-align: center; color: gray">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptates dolorem impedit aut libero aliquid! Veniam at
+                  molestiae nemo consequuntur iste optio alias. Harum nemo
+                  dicta, incidunt unde sapiente quia animi!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row pt-5">
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+              <div class="card p-4">
+                <img
+                  src="images/quran memorization.jpeg"
+                  class="img-fluid rounded"
+                  alt=""
+                  class="img-fluid"
+                />
+                <div class="pt-3 offer-content">
+                  <h4 class="card-title">Quran Memorization</h4>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Nobis ad possimus beatae nostrum ipsa tempora est deleniti!
+                    Repellendus, dolorem numquam!
+                  </p>
+                  <ul>
+                    <li>Quran Memorization (Hifz) Program</li>
+                    <li>Tajweed & Proper Recitation</li>
+                    <li>Islamic Studies & History</li>
+                    <li>Arabic Language Studies</li>
+                    <li>Islamic Ethics & Character Building</li>
+                    <li>Daily Prayers & Islamic Practices</li>
+                  </ul>
+
+                  <button class="mt-4 main-btn">For more Enquries</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+              <div class="card p-4">
+                <img
+                  src="images/computerTraining.jpeg"
+                  class="img-fluid rounded"
+                  alt=""
+                  class="img-fluid"
+                />
+                <div class="pt-3 offer-content">
+                  <h4 class="card-title">computer Training</h4>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Nobis ad possimus beatae nostrum ipsa tempora est deleniti!
+                    Repellendus, dolorem numquam!
+                  </p>
+                  <ul>
+                    <li>Programming & Software Development</li>
+                    <li>Digital Literacy & Office Applications</li>
+                    <li>Web Design & Development</li>
+                    <li>Computer Hardware & Networking</li>
+                    <li>Cybersecurity Fundamentals</li>
+                    <li>Graphic Design & Multimedia</li>
+                  </ul>
+
+                  <button class="mt-4 main-btn">For more Enquries</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+              <div class="card p-4">
+                <img
+                  src="images/students.jpeg"
+                  class="img-fluid rounded"
+                  alt=""
+                  class="img-fluid"
+                />
+                <div class="pt-3 offer-content">
+                  <h4 class="card-title">Proper Nuturing of Students</h4>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Nobis ad possimus beatae nostrum ipsa tempora est deleniti!
+                    Repellendus, dolorem numquam!
+                  </p>
+                  <ul>
+                    <li>Mathematics & Sciences</li>
+                    <li>Language Arts & Literature</li>
+                    <li>Social Studies & History</li>
+                    <li>Foreign Languages</li>
+                    <li>Critical Thinking & Problem Solving</li>
+                    <li>College Preparation & Career Guidance</li>
+                  </ul>
+
+                  <button class="mt-4 main-btn">For more Enquries</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- events -->
+    <section class="events-section">
+      <div class="container my-5 events-card">
+        <h2 class="text-center mb-4">Events and Extra Curriculum Activities</h2>
         <div class="row mb-4">
           <div class="col-md-4 mb-4">
             <div class="card h-100">
-              <a href="nursery.html">
+              <a>
                 <img
-                  src="images/nursery.jpeg"
+                  src="images/graduation.jpeg"
                   class="card-img-top"
                   alt="Nursery Program"
                 />
               </a>
               <div class="card-body">
-                <h5 class="card-title">AQIDA Teachings</h5>
+                <h5 class="card-title">Prize Giving Day</h5>
                 <p class="card-text">
                   Our Nursery program focuses on early childhood development,
                   providing a safe and nurturing environment for our youngest
                   learners.
                 </p>
+                <button class="mt-4 main-btn">Annual Event</button>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-4">
             <div class="card h-100">
-              <a href="#">
+              <a>
                 <img
-                  src="images/kindergarten.jpeg"
+                  src="images/quran competition.jpeg"
                   class="card-img-top"
                   alt="Kindergarten Program"
                 />
               </a>
               <div class="card-body">
-                <h5 class="card-title">Class Quiz</h5>
+                <h5 class="card-title">Quran Competition</h5>
                 <p class="card-text">
                   Our Kindergarten program builds on the foundation laid in
                   Nursery, introducing more structured learning while still
                   emphasizing play and exploration.
                 </p>
+                <button class="mt-4 main-btn">Occasional Event</button>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-4">
             <div class="card h-100">
-              <a href="primary.html">
+              <a>
                 <img
-                  src="images/primary.jpeg"
+                  src="images/moral-talk.jpeg"
                   class="card-img-top"
                   alt="Primary Program"
                 />
               </a>
               <div class="card-body">
-                <h5 class="card-title">Educational Teachings</h5>
+                <h5 class="card-title">Moral Talk</h5>
                 <p class="card-text">
                   Our Primary program offers a comprehensive curriculum that
                   includes core subjects, Islamic studies, and extracurricular
                   activities to foster well-rounded development.
                 </p>
+                <button class="mt-4 main-btn">Daily Event</button>
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
+      </div>
+      <div class="container my-5 events-card">
+        <h2 class="text-center mb-4">Additional Events</h2>
+        <div class="row mb-4">
           <div class="col-md-4 mb-4">
             <div class="card h-100">
-              <a href="jss.html">
+              <a>
                 <img
-                  src="images/jss.jpeg"
+                  src="images/image2.jpeg"
                   class="card-img-top"
-                  alt="Junior Secondary School Program"
+                  alt="Nursery Program"
                 />
               </a>
               <div class="card-body">
-                <h5 class="card-title">Sports</h5>
-                <p class="card-text">
-                  Our Junior Secondary School program prepares students for
-                  higher education with a focus on critical thinking, problem
-                  solving, and leadership skills.
-                </p>
+                <h5 class="card-title">Khutbah</h5>
+                <ul>
+                  <li>Quran Memorization (Hifz) Program</li>
+                  <li>Tajweed & Proper Recitation</li>
+                  <li>Islamic Studies & History</li>
+                  <li>Arabic Language Studies</li>
+                  <li>Islamic Ethics & Character Building</li>
+                  <li>Daily Prayers & Islamic Practices</li>
+                </ul>
+                <button class="mt-4 main-btn">weekly Event</button>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-4">
             <div class="card h-100">
-              <a href="#">
+              <a>
                 <img
-                  src="images/sss.jpeg"
+                  src="images/quran competition.jpeg"
                   class="card-img-top"
-                  alt="Senior Secondary School Program"
+                  alt="Kindergarten Program"
                 />
               </a>
               <div class="card-body">
-                <h5 class="card-title">Extracurricular Activities</h5>
-                <p class="card-text">
-                  Our Senior Secondary School program offers a rigorous
-                  curriculum designed to prepare students for university and
-                  future careers, with a strong emphasis on academic excellence
-                  and personal growth.
-                </p>
+                <h5 class="card-title">Quran Competition</h5>
+                <ul>
+                  <li>Quran Memorization (Hifz) Program</li>
+                  <li>Tajweed & Proper Recitation</li>
+                  <li>Islamic Studies & History</li>
+                  <li>Arabic Language Studies</li>
+                  <li>Islamic Ethics & Character Building</li>
+                  <li>Daily Prayers & Islamic Practices</li>
+                </ul>
+                <button class="mt-4 main-btn">Annually Event</button>
               </div>
             </div>
           </div>
-           <div class="col-md-4 mb-4">
-                <div class="card h-100 cta-card">
-                    <div class="card-body pt-5">
-                        <i class="fas fa-calendar-alt cta-icon"></i>
-                        <h5 class="card-title">Ready to Enroll?</h5>
-                        <p class="card-text">
-                            Take the next step in your child's educational journey. Schedule a campus tour or speak with our admissions team today.
-                        </p>
-                        <button class=" call-to-action">
-                            <i class="fas fa-phone me-2"></i> Contact Us
-                        </button>
-                        
-                    </div>
-                </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <a>
+                <img
+                  src="images/image4.jpeg"
+                  class="card-img-top"
+                  alt="Primary Program"
+                />
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">InterHouse-Sport</h5>
+                <ul>
+                  <li>Mathematics & Sciences</li>
+                  <li>Language Arts & Literature</li>
+                  <li>Social Studies & History</li>
+                  <li>Foreign Languages</li>
+                  <li>Critical Thinking & Problem Solving</li>
+                  <li>College Preparation & Career Guidance</li>
+                </ul>
+                <button class="mt-4 main-btn">Annually Event</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!--  story -->
+    <section id="story">
+      <div class="story-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="text-content text-center text-white">
+                <h2>Ready to Get Your Chidren Educated</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Fugiat, vero repudiandae! Blanditiis tempora dolore inventore?
+                </p>
+                
+                <button class="alt-btn mt-3">
+                  <a href="faqs.html" class="text-decoration-none inherit"
+                    >Contact us</a
+                  >
+                </button>
+                <button class="read-more mt-3">Read More</button>
+                 <button class="alt-btn mt-3">
+                  <a href="admission.html" class="text-decoration-none inherit"
+                    >Contact Admissions</a
+                  >
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -598,13 +686,10 @@
 
     <div id="footer-placeholder"></div>
 
-    <!-- Bootstrap Bundle JS (with Popper) -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="script.js"></script>
+    <script src="active.js"></script>
   </body>
 </html>

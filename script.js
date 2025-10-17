@@ -34,7 +34,7 @@ window.addEventListener("scroll", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const slideshowData = [
     {
-      title1: "Al-Hikmah Daarul-salam",
+      title1: "Al-Hikmah Daarus-salaam",
       title2: "Islamic School",
       description:
         "Providing quality Islamic education combined with modern academic excellence. Our institution nurtures young minds to become future leaders with strong moral character.",

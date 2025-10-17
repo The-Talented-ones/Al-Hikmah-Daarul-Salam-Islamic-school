@@ -1,3 +1,4 @@
+ @import url(programCard.css);
 :root {
   --primary-blue: #2d3192;
   --secondary-blue: #00adf0;
@@ -14,13 +15,53 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
-/* Academic Programs Section */
-.programs-section {
+.service {
+  height: 70vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(images/service-banner.jpeg) center/cover no-repeat;
+}
+.service h1 {
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.service p {
+  color: white;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+/* offer */
+.offer-content .card-title{
+    color: var(--primary-blue);
+}
+.offer-content ul {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.offer-content ul li {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.offer-content ul li:before {
+  content: "✓";
+  color: var(--secondary-blue);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+/* events */
+
+/* Academic events Section */
+.events-section {
   padding: 80px 0;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
-.programs-section h2 {
+.events-section h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: var(--primary-blue);
@@ -28,7 +69,7 @@ body {
   position: relative;
 }
 
-.programs-section h2::after {
+.events-section h2::after {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -44,7 +85,7 @@ body {
   border-radius: 2px;
 }
 
-.program-card .card {
+.events-card .card {
   border: none;
   border-radius: 15px;
   overflow: hidden;
@@ -54,7 +95,7 @@ body {
   position: relative;
 }
 
-.program-card .card::before {
+.events-card .card::before {
   content: "";
   position: absolute;
   top: 0;
@@ -69,28 +110,28 @@ body {
   z-index: 2;
 }
 
-.program-card .card:hover {
+.events-card .card:hover {
   transform: translateY(-12px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-.program-card .card-img-top {
+.events-card .card-img-top {
   height: 220px;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
 
-.program-card .card:hover .card-img-top {
+.events-card .card:hover .card-img-top {
   transform: scale(1.05);
 }
 
-.program-card .card-body {
+.events-card .card-body {
   padding: 2rem;
   position: relative;
   z-index: 1;
 }
 
-.program-card .card-title {
+.events-card .card-title {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: var(--primary-blue);
@@ -100,7 +141,7 @@ body {
   padding-bottom: 0.5rem;
 }
 
-.program-card .card-title::after {
+.events-card .card-title::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -112,15 +153,19 @@ body {
   transition: width 0.3s ease;
 }
 
-.program-card .card:hover .card-title::after {
+
+.events-card .card:hover .card-title::after {
   width: 80px;
 }
 
-.program-card .card-text {
+.events-card .card-text {
   color: var(--text-dark);
   line-height: 1.7;
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
+}
+.events-card .card-body ul li::marker{
+    color: var(--secondary-blue);
 }
 .call-to-action {
   background-color: var(--accent-yellow);
@@ -143,4 +188,12 @@ body {
   font-size: 3rem;
   margin-bottom: 15px;
   color: var(--primary-blue);
+}
+
+/*  */
+.story-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(images/story-img\ \(2\).jpeg) center/cover no-repeat;
+  background-attachment: fixed;
+  padding: 4rem 0;
 }
